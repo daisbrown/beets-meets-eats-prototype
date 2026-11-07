@@ -1,0 +1,12 @@
+@media (max-width: 850px) {
+  .modal { padding: 12px; align-items: center; }
+  .modal article { display: block; max-height: 90dvh; overflow-y: auto; }
+  .modal-image { height: 240px; min-height: 0; }
+  .modal-image > #mimg { height: 240px; min-height: 0; object-fit: cover; object-position: center 53%; }
+  .detail { padding: 24px; }
+  .detail h2 { font-size: 36px; }
+  .detailadd { width: 100%; min-height: 48px; }
+  .x { position: sticky; float: right; top: 10px; margin: 10px 10px -45px 0; }
+  .drawer { overflow-y: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .blend span { animation: none; } }
