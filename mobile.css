@@ -1,3 +1,5 @@
+.detail > small { display: block; }
+.detail .detailadd { display: block; margin-top: 20px; }
 @media (max-width: 850px) {
   .modal { padding: 12px; align-items: center; }
   .modal article { display: block; max-height: 90dvh; overflow-y: auto; }
