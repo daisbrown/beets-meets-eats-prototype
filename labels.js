@@ -1,1 +1,13 @@
-document.head.insertAdjacentHTML('beforeend',`<style>.bottle-label{position:absolute;z-index:2;left:50%;top:51%;transform:translate(-50%,-50%);width:59%;height:34%;display:flex;align-items:center;justify-content:center;gap:6px;color:#181714;text-align:left;pointer-events:none}.bottle-label img{width:25px;height:38px;object-fit:contain;mix-blend-mode:multiply}.bottle-label strong{font:800 15px/.78 Fraunces,serif;letter-spacing:-.06em}.bottle-label strong span{display:block;color:#a61543}.bottle-label small{display:block;font:700 5px/1 DM Sans,sans-serif;letter-spacing:.12em;margin-top:4px;color:#285b3a}.modal-image .bottle-label{width:60%;height:30%}.modal-image .bottle-label img{width:52px;height:75px}.modal-image .bottle-label strong{font-size:31px}.modal-image .bottle-label small{font-size:9px;margin-top:8px}</style>`);function label(){return `<div class="bottle-label"><img src="beets-meets-eats-logo.png" alt=""><div><strong>Beets<br><span>Meets Eats</span></strong><small>FRESH PRESSED</small></div></div>`}document.querySelectorAll('.photo').forEach(p=>p.insertAdjacentHTML('beforeend',label()));document.querySelector('.modal-image')?.insertAdjacentHTML('beforeend',label());
+document.head.insertAdjacentHTML('beforeend', `<style>
+.photo,.modal-image { container-type: inline-size; }
+.bottle-label { position:absolute; z-index:2; left:50%; top:51%; transform:translate(-50%,-50%); width:25%; text-align:center; color:#242019; pointer-events:none; }
+.bottle-label strong { display:block; font:800 5cqw/.9 Fraunces,serif; letter-spacing:-.055em; }
+.bottle-label strong span { display:block; color:#a61543; }
+.bottle-label .leaf { display:block; color:#285b3a; font-size:3cqw; line-height:1; margin-bottom:.7cqw; }
+.modal-image .bottle-label { width:24%; }
+.modal-image .bottle-label strong { font-size:4.5cqw; }
+.modal-image .bottle-label .leaf { font-size:2.5cqw; }
+</style>`);
+const label = '<div class="bottle-label" aria-hidden="true"><span class="leaf">✿</span><strong>Beets<span>Meets</span>Eats</strong></div>';
+document.querySelectorAll('.photo').forEach(p => p.insertAdjacentHTML('beforeend', label));
+document.querySelector('.modal-image')?.insertAdjacentHTML('beforeend', label);
