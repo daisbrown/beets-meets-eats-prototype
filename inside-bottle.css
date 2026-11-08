@@ -1,0 +1,14 @@
+.blend .story-head { display:flex; justify-content:space-between; align-items:start; gap:12px; }
+.blend .story-head p { font-size:13px; margin:6px 0 12px; }
+.blend .replay { border:1px solid #a61543; border-radius:999px; background:transparent; color:#8c123a; padding:7px 12px; font-weight:700; }
+.ingredient-buttons { display:flex; flex-wrap:wrap; gap:8px; }
+.ingredient-buttons button { border:1px solid #dba4b5; border-radius:999px; background:#fffaf4; color:#33251f; padding:9px 13px; font-weight:700; text-transform:capitalize; }
+.ingredient-buttons button[aria-pressed="true"] { background:#285b3a; border-color:#285b3a; color:white; }
+.ingredient-buttons.animate button { animation:ingredient-arrive .45s both; animation-delay:calc(var(--order) * 90ms); }
+.ingredient-info { margin:14px 0 10px; background:#fffaf4; border-radius:9px; padding:13px; }
+.ingredient-info strong { text-transform:capitalize; color:#285b3a; }
+.ingredient-info p { margin:5px 0; font-size:13px; line-height:1.45; }
+.blend small { display:block; font-size:11px; line-height:1.4; }
+.card:focus-visible, button:focus-visible, a:focus-visible { outline:3px solid #d9872b; outline-offset:3px; }
+@keyframes ingredient-arrive { from { opacity:0; transform:translateY(9px); } to { opacity:1; transform:translateY(0); } }
+@media (prefers-reduced-motion:reduce) { .ingredient-buttons.animate button { animation:none; } }
