@@ -1,0 +1,11 @@
+.flavor-filters { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 24px; }
+.flavor-filters span { font:700 15px Fraunces,serif; margin-right:7px; }
+.flavor-filters button { border:1px solid #d9cbb9; background:#fffdf8; color:#285b3a; border-radius:999px; padding:9px 14px; font-weight:700; }
+.flavor-filters button[aria-pressed="true"] { background:#285b3a; color:#fff; border-color:#285b3a; }
+.card[hidden] { display:none; }
+.review { border-top:1px solid #e6dac6; padding-top:14px; }
+.review h3 { font:700 23px Fraunces,serif; }
+.review label { display:block; padding:12px; margin:8px 0; border:1px solid #ded1bd; border-radius:8px; }
+.back-bag { border:0; background:transparent; color:#285b3a; text-decoration:underline; padding:8px 0; font-weight:700; }
+.drawer { height:100dvh; padding-bottom:max(26px, env(safe-area-inset-bottom)); }
+@media(max-width:480px) { .flavor-filters { gap:6px; } .flavor-filters span { width:100%; } .flavor-filters button { padding:9px 11px; } }
