@@ -28,7 +28,7 @@ checkout = function() {
   checkoutButton.onclick = () => {
     const choice = document.querySelector('input[name="fulfillment"]:checked').value;
     C.splice(0); render();
-    cartitems.innerHTML = `<p class="success"><b>That’s a wrap!</b><br>Your sample ${choice.toLowerCase()} order is complete. No real order or payment was processed.</p>`;
+    cartitems.innerHTML = `<p class="success"><b>Demo order complete!</b><br>Your sample ${choice.toLowerCase()} order is complete. No real order or payment was processed.</p>`;
     checkoutButton.textContent = 'Demo checkout'; checkoutButton.onclick = checkout; checkoutButton.disabled = true;
   };
   document.querySelector('.back-bag').onclick = () => { checkoutButton.textContent = 'Demo checkout'; checkoutButton.onclick = checkout; render(); };

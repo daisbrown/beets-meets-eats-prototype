@@ -8,4 +8,5 @@
 .review label { display:block; padding:12px; margin:8px 0; border:1px solid #ded1bd; border-radius:8px; }
 .back-bag { border:0; background:transparent; color:#285b3a; text-decoration:underline; padding:8px 0; font-weight:700; }
 .drawer { height:100dvh; padding-bottom:max(26px, env(safe-area-inset-bottom)); }
+.story-contact { color:#fff; font-weight:700; text-underline-offset:4px; }
 @media(max-width:480px) { .flavor-filters { gap:6px; } .flavor-filters span { width:100%; } .flavor-filters button { padding:9px 11px; } }

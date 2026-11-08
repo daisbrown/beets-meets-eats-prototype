@@ -33,7 +33,7 @@ show = function(index) {
   priorShow(index);
   const names = I[index][3].split(',').map(s => s.trim().replace(/^and /, ''));
   const section = document.querySelector('.blend');
-  section.innerHTML = '<div class="story-head"><div><b>INSIDE THE BOTTLE</b><p>Tap an ingredient to explore its flavor and the good stuff.</p></div><button type="button" class="replay">Replay</button></div><div class="ingredient-buttons"></div><div class="ingredient-info" aria-live="polite"></div><small>Ingredient facts are general; actual nutrition depends on the recipe and preparation. Learn more from <a href="https://ods.od.nih.gov/HealthInformation/nutrientrecommendations.aspx" target="_blank" rel="noopener noreferrer">NIH nutrition resources</a>.</small>';
+  section.innerHTML = '<div class="story-head"><div><b>INSIDE THE BOTTLE</b><p>Tap an ingredient to explore its flavor and nutrition.</p></div><button type="button" class="replay">Replay</button></div><div class="ingredient-buttons"></div><div class="ingredient-info" aria-live="polite"></div><small>Ingredient facts are general; actual nutrition depends on the recipe and preparation. Learn more from <a href="https://ods.od.nih.gov/HealthInformation/nutrientrecommendations.aspx" target="_blank" rel="noopener noreferrer">NIH nutrition resources</a>.</small>';
   const list = section.querySelector('.ingredient-buttons');
   const info = section.querySelector('.ingredient-info');
   names.forEach((name, n) => {
@@ -41,7 +41,7 @@ show = function(index) {
     button.type = 'button'; button.textContent = name; button.style.setProperty('--order', n);
     button.onclick = () => {
       list.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-      const story = ingredientStories[name.toLowerCase()] || ['Adds character to this blend.', 'Final ingredients and nutrition will be confirmed by Jasmine.'];
+      const story = ingredientStories[name.toLowerCase()] || ['Adds flavor to this blend.', 'Final ingredients and nutrition will be confirmed by Jasmine.'];
       info.innerHTML = '';
       const title = document.createElement('strong'); title.textContent = name;
       const flavor = document.createElement('p'); flavor.textContent = story[0];
