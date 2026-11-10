@@ -5,7 +5,7 @@ function blendSelection(){return {base:builderForm.querySelector('input[name=bas
 builderForm.addEventListener('change',event=>{let s=blendSelection();if(s.flavors.length>3){event.target.checked=false;s=blendSelection();document.getElementById('builder-message').textContent='Choose up to three flavors.'}else document.getElementById('builder-message').textContent='';document.getElementById('blend-summary-text').textContent=s.base?`${s.base} base${s.flavors.length?' + '+s.flavors.join(' + '):' — now choose your flavors.'}`:'Pick a base and at least one flavor to get started.'});
 // Keep custom sample recipes available to the existing local demo bag after refresh.
 const customKey='beets-custom-blends-v1';
-let customBlends=[];try{const saved=JSON.parse(localStorage.getItem(customKey)||'[]');if(Array.isArray(saved))customBlends=saved.filter(x=>Array.isArray(x)&&x.length===6&&typeof x[0]==='string'&&x[1]==='beet-bright-labeled.png'&&x[5]===10)}catch(_){}
+let customBlends=[];try{const saved=JSON.parse(localStorage.getItem(customKey)||'[]');if(Array.isArray(saved))customBlends=saved.filter(x=>Array.isArray(x)&&x.length===6&&typeof x[0]==='string'&&x[1]==='beet-bright-labeled.png'&&(x[5]===10||x[5]===6))}catch(_){}
 customBlends.forEach(x=>I.push(x));
 try{const saved=JSON.parse(localStorage.getItem('beets-custom-bag-v1')||'[]');if(Array.isArray(saved))saved.filter(x=>Number.isInteger(x.i)&&x.i>=8&&x.i<I.length&&Number.isInteger(x.q)&&x.q>0&&x.q<=99).forEach(x=>C.push({i:x.i,q:x.q}));}catch(_){}
 const renderWithCustom = render;
